@@ -1,0 +1,52 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 3rem 1rem;
+}
+
+main {
+  font-family: Avenir, Roboto, Helvetica, san-serif;
+  font-size: 0.8rem;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); /* Keep adding new columns - even if theres is no content for them. content does not always take up full width */
+  /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/ /* Don't add more columns than theres is content for. && +content "always" take full width */
+  grid-gap: 1rem;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+article {
+  border: 2px solid black;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+article img {
+  order: -1;
+  max-width: 80%;
+  align-self: center;
+}
+
+article button {
+  margin-top: auto;
+  background: teal;
+  border-radius: 20px;
+  padding: 0.5rem;
+  color: white;
+  border: none;
+}
